@@ -1,0 +1,33 @@
+id,name,last_name,nickname,type,rating
+1,Rolando,Pellerano,Rolo,dad,10
+2,Mario,Campos,,dad,7
+3,Maximo,Gago,,dad,5
+4,Juan Carlos,Ayala,,dad,2
+5,Juan Carlos,Azaña,,dad,8
+6,Néstor,Palomino,,dad,6
+7,Danny,Yañez,,dad,6
+8,Diego,Fatule,,dad,5
+9,Diego,Flores,,dad,2
+10,Jesús,Luque,,dad,7
+11,Julio,Suleta,,dad,7
+12,Julio,Veyán,,dad,5
+13,Miguel,Grados,,dad,3
+14,Miguel,Puccio,,dad,7
+15,Jozsef,Huarcaya,,dad,6
+16,Yoni,Díaz,,dad,6
+17,Edgar,Betancourt,,dad,5
+18,Renato,Medina,,dad,7
+19,Víctor Hugo,,,dad,8
+20,Sami,Fatule,hermano Diego,guest,6
+21,Jesús,Pinedo,primo Danny,guest,10
+22,Alexis,,cuñado Néstor,guest,6
+23,Carlos,Fierro,,dad,7
+24,Enrique,Giove,amigo Danny,guest,3
+25,Eduardo,Rebatta,amigo Danny,guest,5
+26,Jorge,,amigo Néstor,guest,4
+27,Alberto,,amigo Néstor,guest,6
+28,Said,,amigo Néstor,guest,6
+29,Fernando,Izaguire,primo Danny,guest,6
+30,Hugo,,amigo Yoni,guest,5
+31,X,,amigo Néstor,guest,4
+32,Carlos,,amigo Julio,guest,7
