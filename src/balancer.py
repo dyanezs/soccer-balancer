@@ -2,6 +2,10 @@ import pandas as pd
 from itertools import combinations
 import random
 
+
+# --------------------
+# 1. Greedy
+# --------------------
 def balancer_rating(players_df):
 
     sorted_df = players_df.sort_values(by='rating', ascending=False).copy()
@@ -25,12 +29,12 @@ def balancer_rating(players_df):
 
 
 # --------------------
-# 1. Fuerza Bruta (Exhaustive Search)
+# 2. Brute Force
 # --------------------
 def balancer_brute_force(players_df):
     n = len(players_df)
     if n % 2 != 0:
-        raise ValueError("Número impar de jugadores, no se puede dividir equitativamente.")
+        raise ValueError("Odd number of players, it cannot be equally divided.")
 
     min_diff = float("inf")
     best_team_a, best_team_b = None, None
@@ -50,12 +54,15 @@ def balancer_brute_force(players_df):
     return best_team_a, best_team_b
 
 
+# --------------------
+# 3. Brute Force (Exhaustive Search)
+# --------------------
 def balancer_brute_force_all_optimal(players_df):
     players = players_df.to_dict("records")
     n = len(players)
 
     if n % 2 != 0:
-        raise ValueError("Número de jugadores debe ser par para el balanceo exacto.")
+        raise ValueError("Odd number of players, it cannot be equally divided.")
 
     min_diff = float('inf')
     best_combinations = []
@@ -79,7 +86,7 @@ def balancer_brute_force_all_optimal(players_df):
             best_combinations.append((team1, team2))
 
     # Mostrar cantidad de combinaciones óptimas
-    print(f"Se encontraron {len(best_combinations)} combinaciones óptimas con diferencia mínima de rating: {min_diff}")
+    print(f"{len(best_combinations)} optimum combinations found with minimal rating diff: {min_diff}")
 
     results = []
     for team1, team2 in best_combinations:
@@ -90,7 +97,7 @@ def balancer_brute_force_all_optimal(players_df):
     return results
 
 # --------------------
-# 2. Karmarkar-Karp Heurística
+# 4. Karmarkar-Karp Heurística
 # --------------------
 def balancer_karmarkar_karp(players_df):
     player_list = players_df.sort_values("rating", ascending=False).reset_index(drop=True)
@@ -110,12 +117,12 @@ def balancer_karmarkar_karp(players_df):
 
 
 # --------------------
-# 3. Random con múltiples intentos
+# 5. Random con múltiples intentos
 # --------------------
 def balancer_random_trials(players_df, n_trials=10000):
     n = len(players_df)
     if n % 2 != 0:
-        raise ValueError("Número impar de jugadores, no se puede dividir equitativamente.")
+        raise ValueError("Odd number of players, it cannot be equally divided.")
 
     best_team_a, best_team_b = None, None
     min_diff = float("inf")
