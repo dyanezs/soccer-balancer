@@ -48,7 +48,8 @@ def print_teams_for_sharing(df_a, df_b):
         prob_draw = max(0, min(0.5, (1 - (diff_rating / (rating_a + rating_b)))) )
         
         prob_a = (rating_a / (rating_a + rating_b - prob_draw)) * (1 - prob_draw)
-        prob_b = (rating_b / (rating_a + rating_b - prob_draw)) * (1 - prob_draw)
+        prob_b = 1 - prob_a - prob_draw
+        # prob_b = (rating_b / (rating_a + rating_b - prob_draw)) * (1 - prob_draw)
         
         return prob_draw, prob_a, prob_b
 
